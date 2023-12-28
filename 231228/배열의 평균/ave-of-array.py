@@ -19,4 +19,4 @@ for row in range(n):
     print(avg_col,end=" ")
 print()
 
-print((row_sum1+row_sum2)/8)
+print(round((row_sum1+row_sum2)/8,1))
