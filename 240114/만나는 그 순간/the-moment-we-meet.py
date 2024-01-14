@@ -30,9 +30,10 @@ for i in range(b):
             b_pos.append(now_pos)
 
 
-for i in range(len(a_pos)):
-    if a_pos[i] == b_pos[i]:
-        print(i+1)
+answer = -1
+for i in range(1,len(a_pos)):
+    if a_pos[i]==b_pos[i]:
+        answer=i+1
         break
-    elif i == (len(a_pos) - 1):
-        print(-1)
+
+print(answer)
