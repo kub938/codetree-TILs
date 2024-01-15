@@ -55,7 +55,7 @@ if len(pos_a)>len(pos_b):
 
 else:
     for i in range(len(pos_b)):
-        if len(pos_a)<=i+1:
+        if len(pos_a)<=i:
             last_pos = pos_a[-1]
             if pos_b[i]==last_pos and mode==0:
                 ans+=1
