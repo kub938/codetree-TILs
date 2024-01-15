@@ -50,6 +50,8 @@ if len(pos_a)>len(pos_b):
         elif len(pos_b)!=i+1 and pos_a[i] == pos_b[i] and mode == 0:
             ans+=1
             mode = 1
+        else:
+            mode=0
 
 else:
     for i in range(len(pos_b)):
@@ -58,6 +60,8 @@ else:
             if pos_b[i]==last_pos and mode==0:
                 ans+=1
                 mode=1
+            else:
+                mode=0
         elif len(pos_a)!=i+1 and pos_b[i] == pos_a[i] and mode == 0:
             ans+=1
             mode = 1
