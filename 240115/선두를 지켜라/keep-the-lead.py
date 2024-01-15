@@ -3,7 +3,7 @@ n,m = map(int,input().split())
 a_pos = []
 b_pos = []
 
-now_pos = 0
+now_pos = 1
 
 for i in range(n):
     v,t = map(int,input().split())
