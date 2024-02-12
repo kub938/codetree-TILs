@@ -27,13 +27,11 @@ for col in range(n):
             if cnt>90:
                 cnt-=26
             result[row][col] = chr(cnt)
-            
             cnt += 1
     else:
         for row in range(n):
             if cnt>90:
                 cnt-=26
-
             result[row][col] = chr(cnt)
             cnt += 1
     
