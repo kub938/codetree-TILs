@@ -26,7 +26,6 @@ for col in range(n):
         for row in range(n - 1, -1, -1):
             if cnt>90:
                 cnt-=26
-                print(cnt)
             result[row][col] = chr(cnt)
             
             cnt += 1
@@ -34,7 +33,6 @@ for col in range(n):
         for row in range(n):
             if cnt>90:
                 cnt-=26
-                print(cnt)
 
             result[row][col] = chr(cnt)
             cnt += 1
