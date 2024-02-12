@@ -24,13 +24,15 @@ cnt = 65
 for col in range(n):
     if col % 2 != 0:
         for row in range(n - 1, -1, -1):
-            eng = change_eng(cnt)
-            result[row][col] = eng
+            if cnt>90:
+                cnt-=36
+            result[row][col] = chr(cnt)
             cnt += 1
     else:
         for row in range(n):
-            eng = change_eng(cnt)
-            result[row][col] = eng
+            if cnt>90:
+                cnt-=36
+            result[row][col] = chr(cnt)
             cnt += 1
     
 
