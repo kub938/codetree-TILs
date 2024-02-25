@@ -13,7 +13,7 @@ for i in range(n):
         nx,ny = dx[dir[d]],dy[dir[d]]
         x,y = x+nx,y+ny
         if x==0 and y==0:
-            print(cnt)
+            print(cnt+1)
             break
         cnt+=1
     end+=t
