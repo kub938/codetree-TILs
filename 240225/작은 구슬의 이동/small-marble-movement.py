@@ -2,9 +2,6 @@ n, t = map(int, input().split())
 r, c, d = input().split()
 x, y = int(r) - 1, int(c) - 1
 
-area = [[0] * n for _ in range(n)]
-area[x][y] = 1
-
 dxs, dys = [-1, 0, 0, 1], [0, 1, -1, 0]
 
 dict = {'U': 0, 'R': 1, 'L': 2, 'D': 3}
@@ -20,7 +17,8 @@ def in_range(x, y):
 
 for i in range(t):
     if (not in_range(x+dx, y+dy)):
-        dx, dy = dxs[abs(dir - 3)], dys[abs(dir - 3)]
+        dir=abs(dir-3)
+        dx, dy = dxs[abs(dir)], dys[abs(dir)]
     else:
         x += dx
         y += dy
