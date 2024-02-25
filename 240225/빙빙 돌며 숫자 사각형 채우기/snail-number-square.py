@@ -7,15 +7,19 @@ def in_range(x, y):
 
 
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
-dx, dy = 0, 0
 nx, ny = 0, 0
+dir_num=0
+x,y = 0,0
 
-for i in range(1, n * m + 1):
-    sqr[nx][ny] = i
-    if not (in_range(nx + dxs[dx], ny + dys[dy])) or sqr[nx + dxs[dx]][ny + dys[dy]] != 0:
-        dx, dy = (dx + 1) % 4, (dy + 1) % 4
+sqr[0][0] = 1
 
-    nx, ny = nx + dxs[dx], ny + dys[dy]
+for i in range(2, n * m + 1):
+    nx, ny = x+dxs[dir_num], y+dys[dir_num]
+    if not in_range(nx,ny) or sqr[nx][ny] != 0:
+        dir_num=(dir_num+1)%4
+
+    x,y = x+dxs[dir_num], y+dys[dir_num]
+    sqr[x][y]=i
 
 for elem in sqr:
     print(*elem)
