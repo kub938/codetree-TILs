@@ -18,6 +18,8 @@ for i in range(n):
             print(cnt)
             check=-1
             break
+    if x==0 and y==0:
+        break
 
 if check!=-1:
     print(-1)
