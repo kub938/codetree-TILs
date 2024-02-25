@@ -5,7 +5,7 @@ dx,dy = [0,0,1,-1],[1,-1,0,0]
 nx,ny = 0,0
 x,y = 0,0
 cnt=0
-
+check=0
 
 for i in range(n):
     d,t = input().split()
