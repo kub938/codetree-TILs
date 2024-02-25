@@ -5,17 +5,19 @@ dx,dy = [0,0,1,-1],[1,-1,0,0]
 nx,ny = 0,0
 x,y = 0,0
 cnt=0
-end =0
+
+
 for i in range(n):
     d,t = input().split()
     t = int(t)
     for j in range(t):
         nx,ny = dx[dir[d]],dy[dir[d]]
         x,y = x+nx,y+ny
-        if x==0 and y==0:
-            print(cnt+1)
-            break
         cnt+=1
-    end+=t
-if cnt==end:
+        if x==0 and y==0:
+            print(cnt)
+            check=-1
+            break
+
+if check!=-1:
     print(-1)
