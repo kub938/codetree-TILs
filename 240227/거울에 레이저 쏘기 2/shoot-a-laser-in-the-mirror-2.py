@@ -22,14 +22,14 @@ elif k // n == 2:
         x, y = n-1, n - 1
         now_dir = 'L'
     else:
-        x, y = n - 1, -(k % n) + 3
+        x, y = n - 1, -(k % n) + n
         now_dir = 'U'
 elif k // n == 3:
     if k%n==0:
         x, y = n - 1, 0
         now_dir = 'U'
     else:
-        x, y = -(k % n) + 3, 0
+        x, y = -(k % n) + n, 0
         now_dir = 'R'
 elif k// n ==4:
     x,y = 0,0
