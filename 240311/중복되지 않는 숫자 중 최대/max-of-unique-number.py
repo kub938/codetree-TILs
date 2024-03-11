@@ -6,7 +6,9 @@ for elem in arr:
     ans[elem]+=1
 
 for i in range(1000,-1,-1):
+    if not 1 in ans:
+        print(-1)
+        break
     if ans[i]==1:
         print(i)
-    if 1 not in ans:
-        print(-1)
+        break
