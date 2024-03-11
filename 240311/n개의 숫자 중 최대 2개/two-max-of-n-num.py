@@ -1,5 +1,8 @@
 n = int(input())
-arr = list(map(int,input().split()))
-arr.sort(reverse=True)
+arr=list(map(int,input().split()))
+result=[]
+for i in range(n):
+    result.append(max(arr))
+    arr.pop(arr.index(max(arr)))
 
-print(arr[0],arr[1])
+print(result[0], result[1])
