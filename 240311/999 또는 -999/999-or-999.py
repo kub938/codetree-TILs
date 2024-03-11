@@ -1,8 +1,11 @@
 import sys
 
-max_value = -999
-min_value = 999
-arr = map(int,input().split())
+min_value,max_value = 0,0
+arr = list(map(int,input().split()))
+arr_cut = arr[:2]
+max_value = max(arr_cut)
+min_value = min(arr_cut)
+arr = arr[2:]
 
 for elem in arr:
     if elem==999 or elem==-999:
