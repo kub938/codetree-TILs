@@ -3,7 +3,7 @@ n = list(input())
 dec_num = 0
 
 if '0' not in n:
-    n[-1]=0
+    n[-1]='0'
 else:
     for i in range(len(n)):
         if n[i]=='0':
