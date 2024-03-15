@@ -18,9 +18,11 @@ for i in range(19):
                     winpos.append(i+1)
                     winpos.append(j+k-1)
                     break
-            cnt=0
+cnt=0
 for i in range(14):
     for j in range(19):
+        if board[i][j]!=0:
+            num = board[i][j]
             for k in range(5):
                 if num==board[i+k][j]:
                     cnt+=1 
@@ -31,9 +33,11 @@ for i in range(14):
                     winpos.append(i+k-1)
                     winpos.append(j+1)
                     break
-            cnt=0
+cnt=0
 for i in range(14):
     for j in range(14):
+        if board[i][j]!=0:
+            num = board[i][j]
             for k in range(5):
                 if num==board[i+k][j+k]:
                     cnt+=1 
@@ -44,9 +48,11 @@ for i in range(14):
                     winpos.append(i+k-1)
                     winpos.append(j+k-1)
                     break
-            cnt=0
+cnt=0
 for i in range(14):
     for j in range(14):
+        if board[i][j]!=0:
+            num = board[i][j]
             for k in range(5):
                 if j>4 and num==board[i+k][j-k]:
                     cnt+=1 
