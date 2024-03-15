@@ -5,7 +5,7 @@ num = 0
 winner = 0
 winpos = []
 for i in range(19):
-    for j in range(14):
+    for j in range(15):
         if board[i][j]!=0:
             num = board[i][j]
             for k in range(5):
@@ -19,7 +19,7 @@ for i in range(19):
                     winpos.append(j+k-1)
                     break
 cnt=0
-for i in range(14):
+for i in range(15):
     for j in range(19):
         if board[i][j]!=0:
             num = board[i][j]
@@ -34,8 +34,8 @@ for i in range(14):
                     winpos.append(j+1)
                     break
 cnt=0
-for i in range(14):
-    for j in range(14):
+for i in range(15):
+    for j in range(15):
         if board[i][j]!=0:
             num = board[i][j]
             for k in range(5):
@@ -49,8 +49,8 @@ for i in range(14):
                     winpos.append(j+k-1)
                     break
 cnt=0
-for i in range(14):
-    for j in range(14):
+for i in range(15):
+    for j in range(15):
         if board[i][j]!=0:
             num = board[i][j]
             for k in range(5):
