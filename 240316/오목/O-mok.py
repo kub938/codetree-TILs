@@ -40,6 +40,17 @@ for i in range(19):
                     winpos.append(i+k-1)
                     winpos.append(j+k-1)
                     break
+            cnt=0
+            for k in range(5):
+                if j>4 and num==board[i+k][j-k]:
+                    cnt+=1 
+                else:
+                    cnt=0 
+                if cnt==5:
+                    winner=num
+                    winpos.append(i+3)
+                    winpos.append(j-1)
+                    break
 
 print(winner)
 print(*winpos)
