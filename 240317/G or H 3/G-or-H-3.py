@@ -1,19 +1,32 @@
-MAX_RANGE = 10000
+import sys
 
-n,k = map(int,input().split())
-arr = [0] * (MAX_RANGE+1)
-max_score = 0
+n,k =map(int,input().split())
+n_arr = []
+alp_arr = []
+num,alp = 0,''
+score = {'G':1,'H':2,0:0}
+sum_score = 0
+max_score = -sys.maxsize
 
-for _ in range(n):
-    x,c = input().split()
-    x = int(x)
-    arr[x] = 1 if c=='G' else 2
+for i in range(n):
+    num, alp = input().split()
+    n_arr.append(num)
+    alp_arr.append(alp)
 
-for i in range(MAX_RANGE-k+1):
+n_arr = list(map(int,n_arr))
+n = max(n_arr)
+if n<k:
+    n=k
+
+arr = [0 for _ in range(n+1)]
+
+for i,a in zip(n_arr,alp_arr):
+    arr[i] = a
+
+for i in range(n-k+1):
     sum_score = 0
     for j in range(i,i+k+1):
-        sum_score += arr[j]
-    
-    max_score = max(sum_score,max_score)
+        sum_score+=score[arr[j]]
+    max_score = max(max_score,sum_score)
 
 print(max_score)
