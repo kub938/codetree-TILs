@@ -9,7 +9,7 @@ for i in range(n):
         sum_val = 0
         for k in range(i, j + 1):  # 순환
             sum_val += arr[k]
-        ele_avg = sum_val //(j+1-i)
+        ele_avg = sum_val /(j+1-i)
         if ele_avg in arr[i:j+1]:
             cnt += 1
 
