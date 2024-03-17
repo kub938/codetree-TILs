@@ -15,6 +15,8 @@ for i in range(n):
 
 n_arr = list(map(int,n_arr))
 n = max(n_arr)
+if n<k:
+    n=k
 
 arr = [0 for _ in range(n+1)]
 
