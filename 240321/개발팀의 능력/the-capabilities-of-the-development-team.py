@@ -19,7 +19,7 @@ for i in range(n):
                     sum1 = arr[i]+arr[j]
                     sum2 = arr[k]+arr[l]
                     sum3 = sum(arr)-(sum1+sum2)
-                    if sum1==sum2==sum3:
+                    if sum1==sum2 or sum2==sum3 or sum1==sum3:
                         check = True
                         continue
 
