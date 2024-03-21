@@ -20,6 +20,7 @@ for i in range(n):
                     sum2 = arr[k]+arr[l]
                     sum3 = sum(arr)-(sum1+sum2)
                     if sum1==sum2==sum3:
+                        check = True
                         continue
 
                     diff = min(diff, max(sum1,sum2,sum3)-min(sum1,sum2,sum3))
