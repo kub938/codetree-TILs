@@ -1,21 +1,22 @@
 n= int(input())
-x_value = [tuple(map(int,input().split())) for _ in range(n)]
+x = [tuple(map(int,input().split())) for _ in range(n)]
 
 ans = 0
 
 for i in range(n):
     overlap = False
+
     for j in range(n):
         if j == i :
             continue
 
-        x1,x2 = x_value[i]
-        x3,x4 = x_value[j]
+        x1,x2 = x[i]
+        x3,x4 = x[j]
         
-        if x1<=x3<=x2 and x1<=x4<=x2 or x3<=x1<=x4 and x3<=x2<=x4:
+        if (x[i][0] <= x[j][0] and x[i][1] >= x[j][1]) or (x[i][0] >= x[j][0] and x[i][1] <= x[j][1]):
             overlap = True
             break
-            
+
     if overlap == False:
         ans +=1
 
