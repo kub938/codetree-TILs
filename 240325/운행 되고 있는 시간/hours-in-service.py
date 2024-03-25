@@ -3,7 +3,7 @@ arr = [list(map(int,input().split())) for _ in range(n)]
 max_time = 0
 
 for i in range(n):
-    time = [0]*10
+    time = [0]*1001
     for j in range(n):
         cnt=0
         if i==j:
