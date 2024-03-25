@@ -30,13 +30,13 @@ for i in range(len(che)):
     if che[i]>0:
         che_idx.append(str(i))
 
-result = []
+result = [0]*(n+1)
+ans = []
 for j in range(len(che_idx)):
-    check = [0]*(n+1)
     cnt=0
     for i in range(d):
         if che[ec[i]]==1 and str(ec[i]) == che_idx[j]:
-            cnt+=1
-    result.append(cnt)
+            result[ep[i]]=1
+    ans.append(result.count(1))
 
-print(max(result))
+print(max(ans))
