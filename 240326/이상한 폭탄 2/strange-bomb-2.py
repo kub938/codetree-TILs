@@ -4,7 +4,7 @@ arr = [int(input()) for _ in range(n)]
 tmp = []
 max_n = -1
 
-for i in range(n-k):
+for i in range(n-k+1):
     for j in range(i+1,n):
         target = arr[i]
         if target==arr[j]:
