@@ -11,7 +11,6 @@ for k in range(k):
             cnt[main][elem]=0
 
 ans = 0
-print(cnt)
 for i in range(n):
     ans += cnt[i].count(1)
 
