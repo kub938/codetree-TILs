@@ -14,3 +14,5 @@ for i in range(n):
             print(1)
     elif 'pop' in arr[i]:
         print(stack.pop())
+    else:
+        print(stack[-1])
