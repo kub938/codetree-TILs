@@ -1,27 +1,26 @@
 from collections import deque
 
+# 변수 선언 및 입력:
+n = int(input())
 dq = deque()
 
-n = int(input())
-
-for i in range(n):
-    s = input()
-    if s.startswith('push_back'):
-        dq.appendleft(int(s[-1]))
-    elif s.startswith('push_front'):
-        dq.append(int(s[-1]))
-    elif s.startswith('pop_front'):
-        print(dq.pop())
-    elif s.startswith('pop_back'):
+for _ in range(n):
+    command = input()
+    if command.startswith("push_front"):
+        x = int(command.split()[1])
+        dq.appendleft(x)
+    elif command.startswith("push_back"):
+        x = int(command.split()[1])
+        dq.append(x)
+    elif command == "pop_front":
         print(dq.popleft())
-    elif s.startswith('size'):
+    elif command == "pop_back":
+        print(dq.pop())
+    elif command == "size":
         print(len(dq))
-    elif s.startswith('empty'):
-        if not dq:
-            print(1)
-        else:
-            print(0)
-    elif s.startswith('front'):
-        print(dq[-1])
-    elif s.startswith('back'):
+    elif command == "empty":
+        print(1 if not dq else 0)
+    elif command == "front":
         print(dq[0])
+    else:
+        print(dq[-1])
