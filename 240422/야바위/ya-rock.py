@@ -2,7 +2,7 @@ n = int(input())
 tc = [list(map(int,input().split())) for _ in range(n)]
 
 ans = []
-for t in range(n):
+for t in range(3):
     score = 0
     arr = [0]*3
     arr[t] = 1
