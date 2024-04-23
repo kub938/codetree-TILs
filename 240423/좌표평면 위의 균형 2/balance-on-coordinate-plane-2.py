@@ -10,8 +10,8 @@ n = int(input())
 arr = [list(map(int,input().split())) for _ in range(n)]
 max_points = []
 
-for i in range(n):
-    for j in range(n):
+for i in range(101):
+    for j in range(101):
         cnt1,cnt2,cnt3,cnt4 = 0,0,0,0
         for x,y in arr:
             if x>i and y>j:
@@ -23,5 +23,6 @@ for i in range(n):
             elif x<i and y<j:
                 cnt4+=1
         max_points.append(max(cnt1,cnt2,cnt3,cnt4))
+max_points = [i for i in max_points if i!=0]
 
 print(min(max_points))
