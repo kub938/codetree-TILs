@@ -13,7 +13,7 @@ for i in range(2,n):
         check = True
         continue
     if not check and s.count(part_s)==1:
-        c=i
+        c=i-1
    
 
 print(ans)
