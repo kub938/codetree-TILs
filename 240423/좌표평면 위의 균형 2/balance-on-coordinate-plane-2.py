@@ -14,15 +14,15 @@ for i in range(101):
     for j in range(101):
         cnt1,cnt2,cnt3,cnt4 = 0,0,0,0
         for x,y in arr:
-            if x>i and y>j:
-                cnt1+=1
-            elif x>i and y<j:
-                cnt2+=1
-            elif x<i and y>j:
-                cnt3+=1
-            elif x<i and y<j:
-                cnt4+=1
+            if i%2==0 and j%2==0:
+                if x>i and y>j:
+                    cnt1+=1
+                elif x>i and y<j:
+                    cnt2+=1
+                elif x<i and y>j:
+                    cnt3+=1
+                elif x<i and y<j:
+                    cnt4+=1
         max_points.append(max(cnt1,cnt2,cnt3,cnt4))
 max_points = [i for i in max_points if i!=0]
-
 print(min(max_points))
