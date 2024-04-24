@@ -6,7 +6,6 @@ ans = 10001
 
 
 for i in range(hint[0][1]+1):
-    j = 1
     x=i
     for a,b in hint:
         x*=2
@@ -15,7 +14,6 @@ for i in range(hint[0][1]+1):
         else:
             check=False
             break
-        j+=1
 
     if check:
         ans = min(i,ans)
