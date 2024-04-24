@@ -3,6 +3,7 @@ arr = list(map(int,input().split()))
 
 m_value = max(arr)
 cnt = 0
+ans = 0
 
 for max_value in range(m_value,0,-1):
     if cnt==k:
@@ -15,5 +16,8 @@ for max_value in range(m_value,0,-1):
             cnt+=1
         else:
             cnt=0
+
+if ans==0:
+    ans=m_value
 
 print(ans)
