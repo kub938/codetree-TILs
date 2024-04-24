@@ -3,17 +3,22 @@ arr = list(map(int,input()))
 
 max_len = 0
 
-
 for i in range(n):
     if arr[i]!=0:
         continue
     arr[i]=1
     min_len = 100
     cnt=0
-    for j in range(1,n):
-        if arr[j]==1:
+    check = False
+    for j in range(n):
+        if arr[j]==1 and check :
             min_len = min(min_len,cnt+1)
+
             cnt=0
+        if arr[j]==1 :
+            check = True
+        elif not check:
+            continue
         else:
             cnt+=1                
     arr[i]=0
