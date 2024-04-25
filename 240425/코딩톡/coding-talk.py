@@ -4,7 +4,7 @@ arr = [tuple(input().split()) for _ in range(m)]
 
 people = [chr(65+i) for i in range(n)]
 
-for i in range(p-1,n):
+for i in range(p-1,m):
     c,u = arr[i]
     if c in people:
         people.pop(people.index(c))
