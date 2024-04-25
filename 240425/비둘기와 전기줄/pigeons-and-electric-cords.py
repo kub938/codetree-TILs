@@ -5,12 +5,12 @@ line = [-1]*10
 cnt=0
 
 
-for n,l in arr:
-    if line[n]==-1:
-        line[n] = l
-    elif line[n]==0 and l==1:
+for p,l in arr:
+    if line[p]==-1:
+        line[p] = l
+    elif line[p]==0 and l==1:
         cnt+=1
-    elif line[n]==1 and l==0:
+    elif line[p]==1 and l==0:
         cnt+=1
 
 print(cnt)
