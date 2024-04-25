@@ -9,4 +9,5 @@ for i in range(p-1,n):
     if c in people:
         people.pop(people.index(c))
 
-print(*people)
+if arr[p-1][1]!='0':
+    print(*people)
