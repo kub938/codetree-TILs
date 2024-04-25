@@ -2,13 +2,14 @@ a,b = map(int,input().split())
 c,d = map(int,input().split())
 arr = [0]*101
 
-for i in range(a,b+1):
-    arr[i]+=1
+if c<a:
+    a,b,c,d = c,d,a,b
 
-for i in range(c,d+1):
-    arr[i]+=1
+if b<c or d<a:
+    ans = b-a+d-c
+elif b>c:
+    ans = d-a-(b-c)+1
+elif d>a:
+    ans = d-a-(d-a)+1
 
-if 2 in arr:
-    print(arr.count(1)+arr.count(2)-1)
-else:
-    print(arr.count(1)-2)
+print(ans)
