@@ -1,19 +1,17 @@
 n = int(input())
 arr = [int(input()) for _ in range(n)]
+arr.sort()
 
 price=0
+cost = 0
+for i in range(1,n//2+1):
+    s = arr[i-1]
+    e = arr[-i]
+    if e-s<18:
+        break
+    if (e-s-17)%2==0:
+        cost+=2*(((e-s-17)//2)**2)
+    else:
+        cost+=((e-s-17)//2)**2+((e-s-17)//2-1)**2
 
-for i in range(n):
-    best = 0
-    for j in range(n):
-        high = max(arr)
-        if high-17 >= arr[j]:
-            best = max(arr[j],best)
-    if best:
-        level = high-17-best
-        price += level**2
-        arr[arr.index(high)]= high -level
-        arr[arr.index(best)] = best+level
-
-
-print(price)
+print(cost)
