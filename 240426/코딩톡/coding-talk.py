@@ -30,4 +30,5 @@ for i in range(pos,p):
 people.sort()
 people = set(people)
 
-print(*people)
+if arr[p-1][1]!='0':
+    print(*people)
