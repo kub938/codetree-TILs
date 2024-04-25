@@ -7,9 +7,7 @@ if c<a:
 
 if b<c or d<a:
     ans = b-a+d-c
-elif b>c:
-    ans = d-a
-elif d>a:
-    ans = d-a
-
+elif b>c and d>a:
+    ans = (max(b,d)-min(a,c))
+    
 print(ans)
