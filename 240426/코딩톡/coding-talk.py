@@ -25,8 +25,12 @@ for i in range(pos,p):
     else:
         tmp.append(arr[i][0])
         
+for i in range(p,m):
+    for j in range(i,m):
+        if arr[j][0] in people:
+            people.pop(people.index(arr[j][0]))
 
-            
+
 people.sort()
 people = set(people)
 
