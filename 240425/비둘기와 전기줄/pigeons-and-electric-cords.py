@@ -1,7 +1,7 @@
 n = int(input())
 arr= [tuple(map(int,input().split())) for _ in range(n)]
 
-line = [-1]*10
+line = [-1]*11
 cnt=0
 
 
