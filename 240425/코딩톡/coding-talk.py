@@ -1,6 +1,6 @@
 n,m,p = map(int,input().split())
 
-arr = [tuple(input().split()) for _ in range(n)]
+arr = [tuple(input().split()) for _ in range(m)]
 
 people = [chr(65+i) for i in range(n)]
 
