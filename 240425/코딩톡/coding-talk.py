@@ -9,5 +9,10 @@ for i in range(p-1,n):
     if c in people:
         people.pop(people.index(c))
 
-if arr[p-1][1]!='0':
+
+
+if p>1 and arr[p-2][1]==arr[p-1][1]:
+    people.pop(people.index(arr[p-2][0]))
+    print(*people)
+elif arr[p-1][1]!='0':
     print(*people)
