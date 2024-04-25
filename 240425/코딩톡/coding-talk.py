@@ -12,7 +12,8 @@ for i in range(p-1,m):
 
 
 if p>1 and arr[p-2][1]==arr[p-1][1]:
-    people.pop(people.index(arr[p-2][0]))
-    print(*people)
+    if arr[p-2][0] in people:
+        people.pop(people.index(arr[p-2][0]))
+        print(*people)
 elif arr[p-1][1]!='0':
     print(*people)
