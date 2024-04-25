@@ -8,8 +8,8 @@ if c<a:
 if b<c or d<a:
     ans = b-a+d-c
 elif b>c:
-    ans = d-a-(b-c)+1
+    ans = d-a
 elif d>a:
-    ans = d-a-(d-a)+1
+    ans = d-a
 
 print(ans)
