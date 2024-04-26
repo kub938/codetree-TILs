@@ -24,7 +24,6 @@ for c,s in arr:
     if a_score==b_score==c_score and g_status!=1:
         ans+=1
         g_status=1
-        print(c,s,'state1')
 
     elif a_score>b_score and a_score>c_score and g_status!=2:
         ans+=1
