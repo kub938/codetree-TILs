@@ -9,6 +9,8 @@ g_status = 1 # 1:a==b==c 2:a>b,c 3:b>a,c 4:c>a,b 5:a==b 6:a==b 7:b==c
 ans=0
 for c,s in arr:
     s = int(s)
+    if s==0:
+        continue
     if c=='A':
         a_score+=s
     elif c=='B':
