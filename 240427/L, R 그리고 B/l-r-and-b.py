@@ -17,7 +17,7 @@ for i in range(10):
 
 s_dis = abs(b_y-l_y) + abs(b_x-l_x)-1 
 
-if r_x == l_x == b_x or r_y == l_y == b_y:    
+if (r_x == l_x == b_x and (l_x<r_x<b_x or b_x<r_x<l_x)) or r_y == l_y == b_y:    
     s_dis+=2
 
 
