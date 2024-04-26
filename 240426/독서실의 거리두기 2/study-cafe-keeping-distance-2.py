@@ -7,12 +7,12 @@ ans=0
 dis1= 0
 dis2= 0
 
-for i in range(n):
+for i in range(n-1):
     for j in range(i+1,n):
         if arr[i]==1 and arr[j]==1:
             if max_dis<j-i:
                 max_dis = j-i
-                x1,x2 = i,j
+            x1,x2 = i,j
             i=j
 
 if max_dis%2==0:
@@ -27,5 +27,4 @@ if arr[-1]==0:
 
 if dis1<dis2:
     ans = dis2
-
 print(ans)
