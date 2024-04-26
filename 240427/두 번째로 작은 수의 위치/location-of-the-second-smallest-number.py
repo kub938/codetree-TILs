@@ -9,6 +9,7 @@ if n==arr.count(arr[0]):
 
 tmp = sorted(arr[:])
 
+tmp = list(set(tmp))
 target = tmp[1]
 
 check = True
