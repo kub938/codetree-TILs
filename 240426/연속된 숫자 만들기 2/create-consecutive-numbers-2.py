@@ -18,5 +18,7 @@ a,b,c = map(int,input().split())
 
 if a+1 == b and a+2==c:
     print(0)
+elif a+2 == b or b+2==c:
+    print(1)
 else:
     print(2)
