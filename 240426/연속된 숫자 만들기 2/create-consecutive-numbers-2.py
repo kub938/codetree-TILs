@@ -6,12 +6,10 @@ while b-a>1 or c-b>1:
         c = a+(b-a)//2
         b,c = c,b
         cnt+=1
-        print(a,b,c)
     else:
         a = b+(c-b)//2
         a,b = b,a
         cnt+=1
-        print(a,b,c)
 
 
 print(cnt)
