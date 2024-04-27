@@ -11,9 +11,9 @@ for i in arr:
         odd+=1
 
 if odd==even:
-    ans = even 
+    ans = even+odd
 elif odd<even:
-    ans = even
+    ans = even+odd
 else:
     ans+=even*2
     ans+=(odd-even)//3*2
