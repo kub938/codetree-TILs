@@ -8,10 +8,11 @@ for i in range(n):
     best[i] = s/k,i #1시간에 얻을 수 있는 효율
 
 best.sort(reverse = True)
-
 ans = 0
+time = 0
 for i in range(n):
-    if ans+arr[best[i][1]][1]>=t:
+    time += arr[best[i][1]][0]
+    if time>=t:
         break
     ans += arr[best[i][1]][1]
 
