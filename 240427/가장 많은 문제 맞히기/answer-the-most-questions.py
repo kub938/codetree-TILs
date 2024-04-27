@@ -11,9 +11,9 @@ best.sort(reverse = True)
 ans = 0
 time = 0
 for i in range(n):
-    time += arr[best[i][1]][0]
     if time>=t:
         break
+    time += arr[best[i][1]][0]
     ans += arr[best[i][1]][1]
 
 print(ans)
