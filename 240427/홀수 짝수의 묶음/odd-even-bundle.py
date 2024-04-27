@@ -16,9 +16,10 @@ elif odd<even:
     ans = even+1
 else:
     ans+=even*2
+    ans+=(odd-even)//3*2
     if (odd-even)%3==2:
         ans+=1
     elif (odd-even)%3==1:
         ans-=1
-
+    
 print(ans)
