@@ -2,12 +2,30 @@ import sys
 
 n = int(input())
 arr = list(map(int,input().split()))
-
-max_value= -sys.maxsize
-for i in range(n-2):
-    for j in range(i+1,n-1):
-        for k in range(j+1,n):
-            max_value = max(max_value,arr[i]*arr[j]*arr[k])
+cnt = [0,0,0] #0 = 0, 1 = 음수, 2=양수 갯수
     
+arr.sort()
+for e in arr:
+    if e<0:
+        cnt[1]+=1
+    elif e==0:
+        cnt[0]+=1
+    else:
+        cnt[2]+=1
 
-print(max_value)
+
+for i in range(3):
+    if n in cnt:
+        c = cnt.index(n)        
+        if c==0:
+            ans = 0
+        else:
+            ans = arr[-1]*arr[-2]*arr[-3]
+        break
+    elif cnt[1]>=2 and cnt[2]>=1:
+        ans = max(arr[0]*arr[1]*arr[-1], arr[-1]*arr[-2]*arr[-3])
+    else:
+        ans = arr[0]*arr[1]*arr[2]
+
+
+print(ans)
