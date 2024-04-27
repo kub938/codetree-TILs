@@ -13,7 +13,7 @@ for i in arr:
 if odd==even:
     ans = even 
 elif odd<even:
-    ans = even+1
+    ans = even
 else:
     ans+=even*2
     ans+=(odd-even)//3*2
