@@ -19,8 +19,11 @@ while 1:
         del arr[0]
         sorted_arr.pop()
     elif arr[0]==min_n:
-        max_idx = arr.index(max_n)
-        arr.insert(max_idx+1,arr[0])
+        if arr[-1]==sorted_arr[1]:
+            arr.insert(n-1,arr[0])
+        else:
+            max_idx = arr.index(max_n)
+            arr.insert(max_idx+1,arr[0])
         del arr[0]
     else:
         min_idx = arr.index(min_n)
