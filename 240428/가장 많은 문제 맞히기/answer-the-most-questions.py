@@ -11,7 +11,6 @@ for i in range(n):
 best.sort(key =lambda x:(-x[0],x[2]))
 ans = 0
 time = 0
-print(best)
 
 for i in range(n):
     time += arr[best[i][1]][0]
