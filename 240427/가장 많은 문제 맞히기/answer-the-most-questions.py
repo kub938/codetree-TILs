@@ -8,7 +8,7 @@ for i in range(n):
     best[i] = s/k,i #1시간에 얻을 수 있는 효율
 
 
-best.sort(key =lambda x:(x[0],x[1]),reverse = True)
+best.sort(key =lambda x:(x[0],x[-1]),reverse = True)
 ans = 0
 time = 0
 
