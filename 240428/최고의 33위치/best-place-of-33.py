@@ -6,8 +6,8 @@ max_coin = 0
 
 
 
-for i in range(n-(n-1)):
-    for j in range(i,n-(n-1)):
+for i in range(n-2):
+    for j in range(i,n-2):
         coins = 0
         for k in range(3):
             coins += sum(arr[i+k][j:j+3])
