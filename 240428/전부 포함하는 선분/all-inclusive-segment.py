@@ -10,7 +10,7 @@ if min_diff<=max_diff:
     arr.pop()
 else:
     arr.sort()
-    arr.pop(arr[0])
+    del arr[0]
 
 min_x = 200
 max_x = 0
