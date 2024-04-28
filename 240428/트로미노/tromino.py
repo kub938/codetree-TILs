@@ -21,7 +21,7 @@ def L_block():
 def m_block():
     max_value = 0
     if in_range(c+2,r):
-        max_value = max(sum(arr[r][c:c+2]),max_value)
+        max_value = max(sum(arr[r][c:c+3]),max_value)
     elif in_range(c,r+2):
         max_value = max(max_value,arr[r][c]+arr[r+1][c]+arr[r+2][c])
     return max_value
