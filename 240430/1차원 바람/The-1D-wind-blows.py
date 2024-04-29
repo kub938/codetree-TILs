@@ -19,7 +19,7 @@ def l_shift(i):
 
 def u_check(floor,u_dir_num):
     check = False
-    for i in range(floor,-1,-1):
+    for i in range(floor,0,-1):
         for j in range(m):
             if arr[i][j]==arr[i-1][j]:
                 check = True
