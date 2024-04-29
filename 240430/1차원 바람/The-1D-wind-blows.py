@@ -18,8 +18,9 @@ def l_shift(i):
     arr[i][0] = tmp
 
 def u_check(floor,u_dir_num):
-    check = False
+    
     for i in range(floor,0,-1):
+        check = False
         for j in range(m):
             if arr[i][j]==arr[i-1][j]:
                 check = True
@@ -33,8 +34,8 @@ def u_check(floor,u_dir_num):
         if not check:
             break
 def d_check(floor,d_dir_num):
-    check = False
     for i in range(floor,n-1):
+        check = False
         for j in range(m):
             if arr[i][j]==arr[i+1][j]:
                 check = True
