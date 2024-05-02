@@ -1,10 +1,13 @@
-import copy
+import copy,sys
 
 n,m,Q = map(int,input().split())
 arr = [list(map(int,input().split())) for _ in range(n)]
 q = [list(map(int,input().split())) for _ in range(Q)]
 
-
+if Q==0:
+    for i in arr:
+        print(*i)
+    sys.exit()
 def spin(r1,c1,r2,c2):
     tmp = arr[r1+1][c1]
     #직사각형 왼쪽 변부터 반시계 반향으로 진행, 한칸식 당김
@@ -36,7 +39,6 @@ def cal_avg(arr,r1,c1,r2,c2):
                 sum_value+=arr[i][j+1]
                 cnt+=1
             ans[i][j]=sum_value//cnt
-
 
 for e in q:
     r1,c1,r2,c2 = e
