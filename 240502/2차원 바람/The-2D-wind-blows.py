@@ -8,6 +8,7 @@ if Q==0:
     for i in arr:
         print(*i)
     sys.exit()
+
 def spin(r1,c1,r2,c2):
     tmp = arr[r1+1][c1]
     #직사각형 왼쪽 변부터 반시계 반향으로 진행, 한칸식 당김
@@ -46,6 +47,7 @@ for e in q:
     spin(r1,c1,r2,c2)
     ans = copy.deepcopy(arr)
     cal_avg(arr,r1,c1,r2,c2)
+    arr = copy.deepcopy(ans)
 
 
 for i in ans:
