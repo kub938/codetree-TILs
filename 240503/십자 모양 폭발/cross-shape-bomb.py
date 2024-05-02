@@ -4,14 +4,21 @@ r,c = map(int,input().split())
 r,c = r-1,c-1
 tmp = [[] for _ in range(n)]
 
+def in_range(x,y):
+    return 0<=x<n and 0<=y<n
+
 def boom():
     b_n = arr[r][c]
     arr[r][c]=0
     for i in range(1,b_n):
-        arr[r+i][c] = 0
-        arr[r-i][c] = 0
-        arr[r][c+i] = 0
-        arr[r][c-i] = 0
+        if in_range(r+i,c):
+            arr[r+i][c] = 0
+        if in_range(r-i,c):
+            arr[r-i][c] = 0
+        if in_range(r,c+i):
+            arr[r][c+i] = 0
+        if in_range(r,c-i):
+            arr[r][c-i] = 0
 
 def boom_sort():
     for i in range(n):
