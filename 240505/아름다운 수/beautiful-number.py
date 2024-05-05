@@ -6,9 +6,11 @@ check = False
 def b_num(c):
     global cnt
     global check
-    if n==c:
+    if n+1==c:
         if arr.count(1)%1==0 and arr.count(2)%2==0 and arr.count(3)%3==0 and arr.count(4)%4==0:
             check = True
+        else: 
+            return
         if check:
             cnt+=1
             check = False
