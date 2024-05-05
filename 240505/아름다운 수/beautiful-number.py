@@ -1,25 +1,33 @@
 n = int(input())
 cnt = 0
 arr = []
-check = False
+
+def is_beautiful():
+    i = 0
+    while i<n:
+        if i+arr[i]-1>=n:
+            return False
+
+        for j in range(i,i+arr[i]):
+            if arr[i]!=arr[j]:
+                return False
+        i+=arr[i]
+    return True
+            
+
 
 def b_num(c):
     global cnt
-    global check
-    if n+1==c:
-        if arr.count(1)%1==0 and arr.count(2)%2==0 and arr.count(3)%3==0 and arr.count(4)%4==0:
-            check = True
-        else: 
-            return
-        if check:
+
+    if c==n:
+        if is_beautiful():
             cnt+=1
-            check = False
-            return
-    
+        return
+
     for i in range(1,5):
         arr.append(i)
         b_num(c+1)
         arr.pop()
 
-b_num(1)
+b_num(0)
 print(cnt)
