@@ -12,7 +12,7 @@ def in_range(x,y):
     return 0<=x<n and 0<=y<n
 
 def bfs(x,y):
-    que.append([x,y])
+    que.append([x-1,y-1])
     while que:
         x,y = que.popleft()
         for i in range(4):
@@ -22,12 +22,15 @@ def bfs(x,y):
                 dis[nx][ny]=1
 
 for x,y in k:
-    bfs(x,y)
+    bfs(x-1,y-1)
 
 ans = 0
-for i in range(n):
-    for j in range(n):
-        if dis[i][j]==1:
-            ans+=1
 
-print(ans)
+if n==1:
+    print(1)
+else:
+    for i in range(n):
+        for j in range(n):
+            if dis[i][j]==1:
+                ans+=1
+    print(ans)
