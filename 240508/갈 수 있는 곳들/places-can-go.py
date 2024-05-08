@@ -17,7 +17,7 @@ def bfs(x,y):
         x,y = que.popleft()
         for i in range(4):
             nx,ny = x+dx[i],y+dy[i]
-            if in_range(nx,ny) and board[nx][ny]==0 :
+            if in_range(nx,ny) and board[nx][ny]==0 and dis[nx][ny]==0:
                 que.append([nx,ny])
                 dis[nx][ny]=1
 
