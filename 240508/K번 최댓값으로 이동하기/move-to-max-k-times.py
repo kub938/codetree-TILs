@@ -38,4 +38,4 @@ def bfs(x,y,cnt):
 
 x,y = bfs(x,y,cnt)
 
-print(x+1,y+1)
+print(x,y)
