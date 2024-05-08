@@ -14,7 +14,7 @@ def in_range(x,y):
 
 def bfs(x,y,cnt):
     if cnt==k:
-        return x+1,y+1
+        return x,y
     que.append([x,y])
     cnt+=1
     max_value = -1
@@ -38,4 +38,4 @@ def bfs(x,y,cnt):
 
 x,y = bfs(x,y,cnt)
 
-print(x,y)
+print(x+1,y+1)
