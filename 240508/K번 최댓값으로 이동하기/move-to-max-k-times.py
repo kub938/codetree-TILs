@@ -17,7 +17,7 @@ def bfs(x,y,cnt):
         return x+1,y+1
     que.append([x,y])
     cnt+=1
-    max_value = 0
+    max_value = -1
     value = [[0]*n for _ in range(n)]
     max_num = board[x][y]
     while que:
@@ -28,16 +28,14 @@ def bfs(x,y,cnt):
                 que.append([nx,ny])
                 value[nx][ny] = board[nx][ny]
                 max_value = max(max_value,value[nx][ny])
-    
     for i in range(n):
         for j in range(n):
             if value[i][j]==max_value:
                 x,y = i,j
                 return bfs(x,y,cnt)
     return x,y
-    
                     
 
 x,y = bfs(x,y,cnt)
 
-print(x,y)
+print(x+1,y+1)
