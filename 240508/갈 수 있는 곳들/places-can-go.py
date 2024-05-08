@@ -12,8 +12,8 @@ def in_range(x,y):
     return 0<=x<n and 0<=y<n
 
 def bfs(x,y):
-    que.append([x-1,y-1])
-    dis[x-1][y-1] = 1
+    que.append([x,y])
+    dis[x][y]=1
     while que:
         x,y = que.popleft()
         for i in range(4):
@@ -34,4 +34,4 @@ else:
         for j in range(n):
             if dis[i][j]==1:
                 ans+=1
-    print(ans-1)
+    print(ans)
