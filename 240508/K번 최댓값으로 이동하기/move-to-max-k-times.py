@@ -34,6 +34,8 @@ def bfs(x,y,cnt):
             if value[i][j]==max_value:
                 x,y = i,j
                 return bfs(x,y,cnt)
+    return x,y
+    
                     
 
 x,y = bfs(x,y,cnt)
