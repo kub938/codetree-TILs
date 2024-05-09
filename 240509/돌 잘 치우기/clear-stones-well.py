@@ -46,10 +46,10 @@ if m>0:
         for i in comb:
             x,y = i
             copy_board[x][y]=0
-            for j in start_point:
-                r,c = j
-                r,c = r-1,c-1
-                max_value = max(max_value,bfs(copy_board,r,c))
+        for j in start_point:
+            r,c = j
+            r,c = r-1,c-1
+            max_value = max(max_value,bfs(copy_board,r,c))
 else:
     for j in start_point:
         r, c = j
