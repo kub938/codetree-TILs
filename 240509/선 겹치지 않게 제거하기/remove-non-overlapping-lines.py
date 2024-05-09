@@ -3,6 +3,7 @@ line = [0]*501
 point = []
 for i in range(n):
     a,b = map(int,input().split())
+    a = a+1
     if a>b:
         a,b = b,a
         for j in range(a,b):
@@ -19,5 +20,4 @@ if point:
             continue
         else:
             line[i]+=1
-
 print(max(line)-1)
