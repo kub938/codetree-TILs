@@ -38,14 +38,20 @@ for i in range(n):
 max_value = 0
 
 start_point = [list(map(int,input().split())) for _ in range(k)]
-for comb in combinations(stone_pos,m):
-    copy_board = copy.deepcopy(board)
-    for i in comb:
-        x,y = i
-        copy_board[x][y]=0
-        for j in start_point:
-            r,c = j
-            r,c = r-1,c-1
-            max_value = max(max_value,bfs(copy_board,r,c))
 
+if m>0:
+    for comb in combinations(stone_pos,m):
+        copy_board = copy.deepcopy(board)
+        for i in comb:
+            x,y = i
+            copy_board[x][y]=0
+            for j in start_point:
+                r,c = j
+                r,c = r-1,c-1
+                max_value = max(max_value,bfs(copy_board,r,c))
+else:
+    for j in start_point:
+        r, c = j
+        r, c = r - 1, c - 1
+        bfs(board,r,c)
 print(max_value)
