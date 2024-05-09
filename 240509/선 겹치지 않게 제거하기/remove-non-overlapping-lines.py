@@ -5,12 +5,12 @@ for i in range(n):
     a,b = map(int,input().split())
     if a>b:
         a,b = b,a
-        for j in range(a,b+1):
+        for j in range(a,b):
             line[j]+=1
     elif a==b:
         point.append(a)
     else:
-        for j in range(a,b+1):
+        for j in range(a,b):
             line[j]+=1
 
 if point:
