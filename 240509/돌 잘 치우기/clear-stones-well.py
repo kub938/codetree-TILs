@@ -15,6 +15,7 @@ def in_range(x,y):
 def bfs(board,x,y):
     cnt=0
     dis = [[0] * n for _ in range(n)]
+    dis[x][y]=1
     que.append([x,y])
     while que:
         x,y = que.popleft()
