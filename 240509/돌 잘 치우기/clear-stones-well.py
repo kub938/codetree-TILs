@@ -32,7 +32,6 @@ for i in range(n):
             stone_pos.append([i,j])
 
 max_value = 0
-
 start_point = [list(map(int,input().split())) for _ in range(k)]
 
 if m>0:
@@ -55,7 +54,6 @@ if m>0:
 
         max_value = max(cnt,max_value)
 else:
-    cnt=0
     dis = [[0] * n for _ in range(n)]
     for j in start_point:
         r, c = j
@@ -64,6 +62,6 @@ else:
     for i in range(n):
         for j in range(n):
             if dis[i][j] == 1:
-                cnt += 1
+                max_value += 1
 
 print(max_value)
