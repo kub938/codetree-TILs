@@ -53,5 +53,5 @@ else:
     for j in start_point:
         r, c = j
         r, c = r - 1, c - 1
-        bfs(board,r,c)
+        max_value = bfs(board,r,c)
 print(max_value)
