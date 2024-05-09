@@ -15,11 +15,13 @@ def b_num(n):
         arr.pop()
 
 def check(arr):
-    for i in range(n):
+    i =0
+    while i<n:
         target = arr[i]
-        for j in range(target):
-            if n<=i+j or arr[i+j]!=target:
+        for j in range(i,target+i):
+            if n<=j or arr[j]!=target:
                 return False
+        i+=target
     return True    
 
 b_num(n)
