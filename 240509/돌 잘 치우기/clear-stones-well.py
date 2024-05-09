@@ -14,7 +14,6 @@ def in_range(x,y):
 
 def bfs(board,x,y):
     cnt=0
-    dis = [[0] * n for _ in range(n)]
     dis[x][y]=1
     que.append([x,y])
     while que:
@@ -24,11 +23,7 @@ def bfs(board,x,y):
             if in_range(nx,ny) and dis[nx][ny]==0 and board[nx][ny]==0:
                 que.append([nx,ny])
                 dis[nx][ny]= 1
-    for i in range(n):
-        for j in range(n):
-            if dis[i][j]==1:
-                cnt+=1
-    return cnt
+
 
 stone_pos = []
 for i in range(n):
@@ -46,13 +41,29 @@ if m>0:
         for i in comb:
             x,y = i
             copy_board[x][y]=0
+
+        dis = [[0] * n for _ in range(n)]
+        cnt=0
         for j in start_point:
             r,c = j
             r,c = r-1,c-1
-            max_value = max(max_value,bfs(copy_board,r,c))
+            bfs(copy_board,r,c)
+        for i in range(n):
+            for j in range(n):
+                if dis[i][j] == 1:
+                    cnt += 1
+
+        max_value = max(cnt,max_value)
 else:
+    cnt=0
+    dis = [[0] * n for _ in range(n)]
     for j in start_point:
         r, c = j
         r, c = r - 1, c - 1
-        max_value = bfs(board,r,c)
+        bfs(board,r,c)
+    for i in range(n):
+        for j in range(n):
+            if dis[i][j] == 1:
+                cnt += 1
+
 print(max_value)
