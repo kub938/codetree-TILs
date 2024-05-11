@@ -21,13 +21,13 @@ def bfs():
         for i in range(4):
             nx,ny = x+dx[i],y+dy[i]
             if in_range(nx,ny):
-                if board[nx][ny]==1:
+                if board[nx][ny]==1 and tmp[nx][ny]!=0:
                     tmp[nx][ny]=0
                     melt+=1
-                elif board[nx][ny]==0 and dis[nx][ny]==0:
+                if board[nx][ny]==0 and dis[nx][ny]==0:
                     dis[nx][ny]=1
                     que.append([nx,ny])
-        board = copy.deepcopy(tmp)
+    board = copy.deepcopy(tmp)
     return melt
 
 
