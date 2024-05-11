@@ -9,7 +9,10 @@ def cal(n):
 
 cnt=0
 
-if n<=3:
+
+if (n%2)%3!=0:
+    print(0)
+elif n<=3:
     print(1)
 else:
     cal(n)
