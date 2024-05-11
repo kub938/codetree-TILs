@@ -1,5 +1,5 @@
 # n-2 + n-1 = n
-fibo = [1,1]
+fibo = [0,1,1]
 n = int(input())
 
 for i in range(n):
