@@ -13,6 +13,6 @@ for i in range(1,n):
 
 for i in range(1,n):
     for j in range(1,n):
-        sum_line[i][j] = max(sum_line[i-1][j-1]+board[i][j],sum_line[i-1][j]+board[i][j],sum_line[i][j])
+        sum_line[i][j] = max(sum_line[i][j-1]+board[i][j],sum_line[i-1][j]+board[i][j],sum_line[i][j])
 
 print(sum_line[n-1][n-1])
