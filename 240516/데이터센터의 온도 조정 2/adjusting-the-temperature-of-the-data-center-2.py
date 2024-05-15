@@ -1,21 +1,19 @@
 n,c,g,h = map(int,input().split())
-
 t = [list(map(int,input().split())) for _ in range(n)] 
-arr = [0]*2001
-max_idx = 0
-for ta,tb in t:
-    for i in range(ta,tb+1):
-        arr[i]+=1
+arr = [0]*1001
 
-target = arr.index(max(arr))
 
-ans = 0
-for ta,tb in t:
-    if ta<=target<=tb:
-        ans+=g
-    elif tb>target:
-        ans+=c
-    elif target<ta:
-        ans+=h
+def cal_value(l,H,t):
+    if t<l:
+        return c
+    elif t>H:
+        return h
+    else:
+        return g
 
-print(ans)
+max_value = 0
+for i in range(1001):
+    for l,H in t:
+        max_value = max(cal_value(l,H,i),max_value)
+
+print(max_value)
