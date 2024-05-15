@@ -13,9 +13,9 @@ ans = 0
 for ta,tb in t:
     if ta<=target<=tb:
         ans+=g
-    elif target<ta:
+    elif tb>target:
         ans+=c
-    elif target>tb:
+    elif target<ta:
         ans+=h
 
 print(ans)
