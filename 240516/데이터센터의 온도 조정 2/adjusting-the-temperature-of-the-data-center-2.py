@@ -13,7 +13,9 @@ def cal_value(l,H,t):
 
 max_value = 0
 for i in range(1001):
+    sum_value = 0
     for l,H in t:
-        max_value = max(cal_value(l,H,i),max_value)
+        sum_value+=cal_value(l,H,i)
+        max_value = max(sum_value,max_value)
 
 print(max_value)
