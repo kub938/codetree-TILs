@@ -1,7 +1,7 @@
 n,c,g,h = map(int,input().split())
 
 t = [list(map(int,input().split())) for _ in range(n)] 
-arr = [0]*1000
+arr = [0]*2001
 max_idx = 0
 for ta,tb in t:
     for i in range(ta,tb+1):
