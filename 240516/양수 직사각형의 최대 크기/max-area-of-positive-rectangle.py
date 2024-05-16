@@ -13,7 +13,7 @@ def row_search(x,y):
             return r-1
     return r
 
-ans = 0
+ans = -1
 for x in range(n):
     for y in range(m):
         if board[x][y]>0:
