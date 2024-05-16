@@ -13,4 +13,6 @@ for i in range(n-t):
         sum_value+=diff_list[j]
     ans = min(ans,sum_value)
 
+if n==1:
+    ans = diff_list[0]
 print(ans)
