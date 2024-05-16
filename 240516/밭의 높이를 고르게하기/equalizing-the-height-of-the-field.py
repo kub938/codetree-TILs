@@ -7,7 +7,7 @@ for i in range(n):
     diff_list.append(abs(arr[i]-h))
 
 ans = 200
-for i in range(n-t):
+for i in range(n-t+1):
     sum_value = 0
     for j in range(i,t+i):
         sum_value+=diff_list[j]
