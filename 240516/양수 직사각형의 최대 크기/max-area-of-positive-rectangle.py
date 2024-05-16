@@ -17,7 +17,7 @@ ans = 0
 for x in range(n):
     for y in range(m):
         if board[x][y]>0:
-            nx,ny = col_search(x,y),row_search(x,y)
+            ny,nx = col_search(x,y),row_search(x,y)
             result=0
             for i in range(x,nx+1):
                 cnt=0
