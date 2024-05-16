@@ -6,7 +6,7 @@ cnt=0
 for i in range(n):
     diff_list.append(abs(arr[i]-h))
 
-ans = 400
+ans = 2000
 for i in range(n-t+1):
     sum_value = 0
     for j in range(i,t+i):
