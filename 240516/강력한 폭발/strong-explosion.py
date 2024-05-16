@@ -1,16 +1,12 @@
 def solved(m):
     global ans
-
     if m==0:
         ans = max(boom(bombs),ans)
         return
     for i in range(3):
-        if check[i]==0:
-            bombs.append(i)
-            check[i]=1
-            solved(m-1)
-            check[i]=0
-            bombs.pop()
+        bombs.append(i)
+        solved(m-1)
+        bombs.pop()
 
 def in_range(x,y):
     return 0<=x<n and 0<=y<n
@@ -32,7 +28,6 @@ def boom(bombs):
                 if in_range(nx,ny) and dis[nx][ny]==0:
                     dis[nx][ny]=1
                     cnt+=1
-      
         max_cnt = max(max_cnt,cnt)
     return max_cnt
         
@@ -42,7 +37,6 @@ board = [list(map(int,input().split())) for _ in range(n)]
 target = []
 bombs = []
 ans = 0
-check = [0]*3
 
 t_cnt = 0
 for i in range(n):
