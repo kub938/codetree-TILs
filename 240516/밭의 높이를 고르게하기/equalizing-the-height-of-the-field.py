@@ -5,12 +5,12 @@ diff_list = []
 cnt=0
 for i in range(n):
     diff_list.append(abs(arr[i]-h))
-    if arr[i]==h:
-        cnt+=1
 
-ans = 0
-diff_list.sort()
-for i in range(t):
-    ans+=diff_list[i]
+ans = 200
+for i in range(n-t):
+    sum_value = 0
+    for j in range(i,t+i):
+        sum_value+=diff_list[j]
+    ans = min(ans,sum_value)
 
 print(ans)
