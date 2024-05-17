@@ -2,10 +2,10 @@ a,b = map(int,input().split())
 n = int(input(),a)
 
 if b==8:
-    n = oct(n)
+    n = str(oct(n))[2:]
 elif b==2:
-    n = bin(n)
+    n = str(bin(n))[2:]
 elif a==16:
-    n = hex(n)
+    n = str(hex(n))[2:]
 
-print(str(n)[2:])
+print(n)
