@@ -12,7 +12,8 @@ else:
     cal_day = sum_month+month[m1]-d1+d2
 
 ans = cal_day//7
-if days[day]<=cal_day%7:
-    ans+=1
+if cal_day%7!=0:
+    if days[day]<=cal_day%7:
+        ans+=1
 
 print(ans)
