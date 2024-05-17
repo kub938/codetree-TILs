@@ -1,8 +1,8 @@
 n = int(input())
 t_case = [list(input().split()) for _ in range(n)]
-arr= [0]*2001
+arr= [0]*200001
 #검은색 = 1 흰색 = -1
-now_pos = 20
+now_pos = 0
 for m,d in t_case:
     m = int(m)
     if d=='L':
