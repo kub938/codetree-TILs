@@ -12,10 +12,13 @@ def check(x1,y1,x2,y2):
     return False
 
 ans =0 
+s = 0
 for i in range(n):
     for j in range(m):
         for k in range(n):
             for l in range(m):
-                ans = max(check(i,j,k,l),ans)
+                s = check(i,j,k,l)
+                if s:
+                    ans = max(s,ans)
 
 print(ans)
