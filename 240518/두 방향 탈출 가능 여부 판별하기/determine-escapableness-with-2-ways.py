@@ -16,6 +16,6 @@ def dfs():
 def in_range(x,y):
     return 0<=x<n and 0<=y<m
 
-dfs():
+dfs()
 
 print(visited[n-1][m-1])
