@@ -12,7 +12,6 @@ def dfs():
             if in_range(nx,ny) and board[nx][ny]==1 and visited[nx][ny]==0:
                 stack.append([nx,ny])
                 visited[nx][ny]=1
-                if nx==n-1 and ny==m-1:
 
 def in_range(x,y):
     return 0<=x<n and 0<=y<m
