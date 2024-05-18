@@ -13,13 +13,10 @@ def dfs():
                 stack.append([nx,ny])
                 visited[nx][ny]=1
                 if nx==n-1 and ny==m-1:
-                    return True
-    return False
 
 def in_range(x,y):
     return 0<=x<n and 0<=y<m
 
-if dfs():
-    print(1)
-else:
-    print(0)
+dfs():
+
+print(visited[n-1][m-1])
