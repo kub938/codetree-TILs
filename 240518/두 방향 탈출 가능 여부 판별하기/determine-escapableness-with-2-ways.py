@@ -9,8 +9,9 @@ def dfs():
         x,y = stack.pop()
         for i in range(2):
             nx,ny = x+dx[i],y+dy[i]
-            if in_range(nx,ny) and board[nx][ny]==1:
+            if in_range(nx,ny) and board[nx][ny]==1 and visited[nx][ny]==0:
                 stack.append([nx,ny])
+                visited[nx][ny]=1
                 if nx==n-1 and ny==m-1:
                     return True
     return False
