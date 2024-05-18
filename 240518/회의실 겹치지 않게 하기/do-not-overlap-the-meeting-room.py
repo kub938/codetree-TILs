@@ -1,14 +1,15 @@
-import sys
+n = int(input())
+arr= [list(map(int,input().split())) for _ in range(n)]
 
-N = int(input())
-M = []
-end, mcount = 0, 0
-for i in range(N):
-    M.append(list(map(int,sys.stdin.readline().split())))
-M = sorted(M,key = lambda x: (x[1],x[0]))
 
-for i in range(N):
-    if end <= M[i][0]:
-        mcount += 1
-        end = M[i][1]
-print(N-mcount)
+arr.sort(key=lambda x:x[1])
+
+cnt=0
+last_e = -1
+for s,e in arr:
+    if last_e<=s:
+        last_e = e
+        cnt+=1
+        
+
+print(n-cnt)
