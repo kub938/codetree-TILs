@@ -1,4 +1,4 @@
-fs = required('fs')
-a = Number(fs.readFileSync(0).toString())
+const fs = required('fs')
+let a = Number(fs.readFileSync(0).toString())
 
 console.log(a*2+3)
