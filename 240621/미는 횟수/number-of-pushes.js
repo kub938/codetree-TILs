@@ -13,7 +13,7 @@ while(s.join(',')!=target){
         break
     }
     let tmp = s.pop()
-    s = [...tmp,...s]
+    s = [tmp,...s]
 }
 
 if (check){
