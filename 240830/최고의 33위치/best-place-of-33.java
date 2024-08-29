@@ -20,8 +20,8 @@ public class Main {
         for(int i=0;i<n-2;i++){
             for(int j=0;j<n-2;j++){
                 int value = 0;
-                for(int k=i;k<i+3 && i+3<=n;k++){
-                    for(int l=j;l<i+3 && i+3<=n;l++){
+                for(int k=i;k<i+3;k++){
+                    for(int l=j;l<i+3;l++){
                         value += arr[k][l];
                     }
                 }
