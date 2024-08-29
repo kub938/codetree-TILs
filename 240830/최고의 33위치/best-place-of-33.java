@@ -21,7 +21,7 @@ public class Main {
             for(int j=0;j<n-2;j++){
                 int value = 0;
                 for(int k=i;k<i+3;k++){
-                    for(int l=j;l<i+3;l++){
+                    for(int l=j;l<j+3;l++){
                         value += arr[k][l];
                     }
                 }
