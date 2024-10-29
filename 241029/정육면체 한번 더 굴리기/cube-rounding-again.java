@@ -54,7 +54,7 @@ public class Main {
             if(mapValue < diceValue){
                 dir = (dir+1)%4;
             }else if(mapValue>diceValue){
-                dir = (dir-1)%4;
+                dir = (dir+3)%4;
             }
         }
         System.out.println(score);
