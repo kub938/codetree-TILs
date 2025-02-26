@@ -12,7 +12,12 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
-        int[][] arr = new int[n][n];
+
+    if(n==1){
+        result = 2;
+    }else{
+ int[][] arr = new int[n][n];
+
 
         for(int i=0; i<n; i++){
             st = new StringTokenizer(br.readLine());
@@ -51,11 +56,7 @@ public class Main {
                 }
             }
         }
-
+    }
         System.out.println(result);
-
-
-
-
     }
 }
