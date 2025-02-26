@@ -27,7 +27,10 @@ public class Main {
                 if(arr[i][j] == arr[i][j-1]){
                     cnt+=1;
 
+                }else{
+                    cnt=1;
                 }
+
                 if(cnt==m){
                     result+=1;
                     break;
@@ -39,6 +42,8 @@ public class Main {
             for (int j = 1; j < n; j++) {
                 if(arr[j][i] == arr[j-1][i]){
                     cnt+=1;
+                }else{
+                    cnt=1;
                 }
                 if(cnt==m){
                     result+=1;
